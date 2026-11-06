@@ -14,6 +14,31 @@ package part19;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Friend.java too.
 
+// Declares the public StaticKeyword class
 public class StaticKeyword {
 
+    // Defines the main method where the program starts
+    public static void main(String[] args) {
+
+        // Prints the shared friend count before any Friend objects are created
+        System.out.println(Friend.numberOfFriends);
+        // Creates the first Friend, which increases the shared count to 1
+        Friend friend1 = new Friend("SpongeBob");
+        // Prints the shared count through the Friend class
+        System.out.println(Friend.numberOfFriends);
+        // Creates a second Friend and increases the same shared count
+        Friend friend2 = new Friend("Patrick");
+        // Prints the shared count, which is now 2
+        System.out.println(Friend.numberOfFriends);
+        // Creates a third Friend and increases the shared count again
+        Friend friend3 = new Friend("Squidward");
+        // Prints the shared count, which is now 3
+        System.out.println(Friend.numberOfFriends);
+        // Calls the static displayFriends method using the class name
+        Friend.displayFriends();
+        // Creates a fourth Friend, which changes the shared count from 3 to 4
+        Friend friend4 = new Friend("Sandy");
+        // Calls the static method again to show the new total
+        Friend.displayFriends();
+    }
 }
