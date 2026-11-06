@@ -14,6 +14,23 @@ package part17;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Car.java too.
 
+// Declares the public class named ToStringMethod
 public class ToStringMethod {
-
+    // Defines the main method where the program begins
+    public static void main(String[] args) {
+        // Creates a new Car object and stores it in a variable named car
+        Car car = new Car();
+        // Prints the make stored inside the car object
+        System.out.println(car.make);
+        // Prints the model stored inside the car object
+        System.out.println(car.model);
+        // Prints the color stored inside the car object
+        System.out.println(car.color);
+        // Prints the year stored inside the car object
+        System.out.println(car.year);
+        // Calls the car object's toString method directly and prints what it returns
+        System.out.println(car.toString());
+        // Prints the car object, which automatically calls its toString method
+        System.out.println(car);
+    }
 }
