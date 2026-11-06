@@ -33,15 +33,37 @@ public class Receiver {
     public int getYards() {
         return yards;
     }
-    // Records a completed pass and the yards gained on the play
+
+    // Records a completed pass and the yards gained
     public void catchBall(int gain) {
         // Adds one catch to this receiver's total
         catches++;
-        // Adds the yards from this catch to the receiver's total yards
+
+        // Adds the gain to the receiver's total yards
         yards = yards + gain;
     }
+
+    // Calculates the receiver's average yards for each catch
+    public double yardsPerCatch() {
+
+        // Prevents division by zero when the receiver has no catches
+        if (catches == 0) {
+            return 0.0;
+        }
+
+        // Converts yards to a double so the average can include decimals
+        return (double) yards / catches;
+    }
+
     // Gives back a readable description of this receiver and his statistics
     public String toString() {
+
+        // Uses the singular word catch when there is exactly one catch
+        if (catches == 1) {
+            return "#" + number + " " + name + ": " + catches + " catch, " + yards + " yards";
+        }
+
+        // Uses catches for zero or more than one
         return "#" + number + " " + name + ": " + catches + " catches, " + yards + " yards";
     }
 }
