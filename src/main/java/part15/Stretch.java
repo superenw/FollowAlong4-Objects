@@ -12,4 +12,79 @@ package part15;
 
 public class Stretch {
 
+    public static void main(String[] args) {
+
+        /* MY GUESS:
+           Blue
+           red
+           red
+           3000.0
+        */
+
+        // Stretch A
+        Car a = new Car();
+        Car b = new Car();
+
+        b.color = "red";
+
+        System.out.println(a.color);
+        System.out.println(b.color);
+
+        a = b;
+
+        System.out.println(a.color);
+
+        final double TAX_RATE = 0.06;
+
+        System.out.println(a.price * TAX_RATE);
+
+
+        // Stretch B1
+        Phone phone = new Phone();
+
+        phone.charge();
+        phone.charge();
+
+        System.out.println(phone.brand + " battery: " + phone.battery);
+
+
+        // Stretch B2
+        Phone phone2 = new Phone();
+
+        phone2.brand = "Samsung";
+
+        System.out.println(phone.brand + " / " + phone2.brand);
+        System.out.println(phone.battery + " / " + phone2.battery);
+
+
+        // Stretch B3
+        Phone full = new Phone();
+
+        full.battery = 95;
+
+        full.charge();
+        full.charge();
+    }
+}
+
+
+// Stretch B — Phone class
+class Phone {
+
+    String brand = "Apple";
+
+    int battery = 80;
+
+    final int MAX_BATTERY = 100;
+
+    void charge() {
+
+        battery = battery + 10;
+
+        if (battery > MAX_BATTERY) {
+            battery = MAX_BATTERY;
+        }
+
+        System.out.println("Charging... " + battery + "%");
+    }
 }
