@@ -14,6 +14,31 @@ package part18;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Food.java too.
 
+// Declares the public class named ArrayOfObjects
 public class ArrayOfObjects {
 
+    // Defines the main method where the program begins
+    public static void main(String[] args) {
+
+        // Creates a Food object named food1 with the name "pizza"
+        Food food1 = new Food("pizza");
+
+        // Creates a Food object named food2 with the name "hamburger"
+        Food food2 = new Food("hamburger");
+
+        // Creates a Food object named food3 with the name "hot dog"
+        Food food3 = new Food("hot dog");
+
+        // Creates a Food array and fills it with the three Food objects
+        Food[] refrigerator = {food1, food2, food3};
+
+        // Gets the first Food object in the array and prints its name
+        System.out.println(refrigerator[0].name);
+
+        // Gets the second Food object in the array and prints its name
+        System.out.println(refrigerator[1].name);
+
+        // Gets the third Food object in the array and prints its name
+        System.out.println(refrigerator[2].name);
+    }
 }
