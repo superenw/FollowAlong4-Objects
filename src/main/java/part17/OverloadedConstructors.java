@@ -13,7 +13,21 @@ package part17;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Pizza.java too.
-
+// Declares the public class named OverloadedConstructors
 public class OverloadedConstructors {
-
+    // Defines the main method where the program begins
+    public static void main(String[] args) {
+        // Creates a Pizza object using the constructor that takes four String values
+        Pizza pizza = new Pizza("thick crust", "tomato", "mozzarella", "pepperoni");
+        // Prints a heading before showing the pizza's ingredients
+        System.out.println("Here are the ingredients of your pizza: ");
+        // Prints the bread stored inside the pizza object
+        System.out.println(pizza.bread);
+        // Prints the sauce stored inside the pizza object
+        System.out.println(pizza.sauce);
+        // Prints the cheese stored inside the pizza object
+        System.out.println(pizza.cheese);
+        // Prints the topping stored inside the pizza object
+        System.out.println(pizza.topping);
+    }
 }
