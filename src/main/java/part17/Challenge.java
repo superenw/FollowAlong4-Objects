@@ -1,27 +1,40 @@
 package part17;
-
-// Video: https://www.youtube.com/watch?v=xk4_1vDrzzo&t=12741s
-//        (no video for the challenge — it uses arrays, from part 10)
-//
-// SECTION D — Challenge. Two methods. The test in src/test/java/part17/ChallengeTest.java checks them.
-// Change only the lines marked YOUR CODE. The README explains each one.
-
 public class Challenge {
-
-    // Add up the numbers in the array, but 13 does not count,
-    // and neither does the number right after a 13.
-    //   sumSkip13({1, 2, 3})      → 6
-    //   sumSkip13({1, 13, 5, 2})  → 3     (13 and 5 are skipped)
-    //   sumSkip13({})             → 0
+    // Adds all numbers except 13 and the number immediately after a 13
     public static int sumSkip13(int[] nums) {
-        return 0;   // YOUR CODE
+
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            // Do not add 13
+            if (nums[i] == 13) {
+                continue;
+            }
+
+            // Do not add a number if the number before it was 13
+            if (i > 0 && nums[i - 1] == 13) {
+                continue;
+            }
+
+            // Adds the current allowed number to the total
+            sum = sum + nums[i];
+        }
+
+        return sum;
     }
 
-    // true if two numbers NEXT TO EACH OTHER in the array are both equal to value.
-    //   hasPair({1, 2, 2}, 2)  → true
-    //   hasPair({2, 1, 2}, 2)  → false   (the 2s are not next to each other)
-    //   hasPair({7}, 7)        → false
+    // Returns true if two numbers beside each other both equal value
     public static boolean hasPair(int[] nums, int value) {
-        return false;   // YOUR CODE
+
+        // Stops one position early because we also check i + 1
+        for (int i = 0; i < nums.length - 1; i++) {
+
+            // Checks whether the current number and the next number both match value
+            if (nums[i] == value && nums[i + 1] == value) {
+                return true;
+            }
+        }
+
+        // No matching pair was found
+        return false;
     }
 }
