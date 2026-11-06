@@ -11,11 +11,17 @@ package part15;
 //    His class with main is called Main. Yours is called ObjectOriented.
 //    Leave the "package part15;" line and the "public class ObjectOriented" line alone.
 //    He also makes a second class called Car. YOU make that file too:
-//    right-click the part15 folder -> New -> Java Class -> type Car -> Enter.
 //
-// SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
-//    in THIS file AND in Car.java, saying in YOUR OWN WORDS what that line does.
+// SECTION B — COMMENTS: put a // comment ABOVE every line of code.
 
+// Declares a public class named ObjectOriented
 public class ObjectOriented {
 
+    // Defines the main method, which is the entry point of the program
+    public static void main(String[] args) {
+        // Creates a new Car object and stores its reference in myCar
+        Car myCar = new Car();
+        // Prints the model field belonging to the myCar object
+        System.out.println(myCar.model);
+    }
 }
