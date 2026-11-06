@@ -12,4 +12,45 @@ package part19;
 
 public class Stretch {
 
+    public static void main(String[] args) {
+
+        /* MY GUESS:
+           0
+           2
+           You have 2 friends
+        */
+
+        // Stretch A
+        System.out.println(Friend.numberOfFriends);
+
+        Friend a = new Friend("Gary");
+        Friend b = new Friend("Plankton");
+
+        System.out.println(Friend.numberOfFriends);
+
+        Friend.displayFriends();
+
+
+        // Stretch B1
+        long rounded = Math.round(3.7);
+        double root = Math.sqrt(81);
+        int bigger = Math.max(4, 9);
+
+        System.out.println(rounded + " " + root + " " + bigger);
+
+
+        // Stretch B2
+        System.out.println(Stretch.square(5));
+        System.out.println(square(12));
+
+
+        // Stretch B3
+        Friend c = new Friend("Karen");
+
+        System.out.println("Newest friend: " + Friend.newestFriend);
+    }
+
+    static int square(int n) {
+        return n * n;
+    }
 }
