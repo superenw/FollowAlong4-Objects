@@ -10,12 +10,25 @@ package part16;
 // SECTION A — FOLLOW ALONG: type the code from the video (or the guide).
 //    His class with main is called Main. Yours is called Constructors.
 //    Leave the "package part16;" line and the "public class Constructors" line alone.
-//    He also has a second class called Human. YOU make that file too:
-//    right-click the part16 folder -> New -> Java Class -> type Human -> Enter.
+//    He also has a second class called Human. YOU make that file too.
 //
-// SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
+// SECTION B — COMMENTS: put a // comment ABOVE every line of code,
 //    in THIS file AND in Human.java, saying in YOUR OWN WORDS what that line does.
-
+// Declares the public Constructors class
 public class Constructors {
-
+    // Defines the main method where the program starts
+    public static void main(String[] args) {
+        // Creates a Human object named human1 and passes in its name, age, and weight
+        Human human1 = new Human("Rick", 65, 70);
+        // Creates a second Human object with different information
+        Human human2 = new Human("Morty", 16, 50);
+        // Prints the name stored inside human1
+        System.out.println(human1.name);
+        // Prints the name stored inside human2
+        System.out.println(human2.name);
+        // Calls human1's eat method
+        human1.eat();
+        // Calls human2's drink method
+        human2.drink();
+    }
 }
