@@ -12,4 +12,51 @@ package part17;
 
 public class Stretch {
 
+    public static void main(String[] args) {
+
+        /* MY GUESS:
+           null
+           olives
+           null
+           Ford
+           Mustang
+           red
+           2021
+        */
+
+        // Stretch A
+        Pizza a = new Pizza("flatbread", "pesto");
+        Pizza b = new Pizza("thin crust", "tomato", "cheddar", "olives");
+        Pizza c = new Pizza();
+
+        System.out.println(a.cheese);
+        System.out.println(b.topping);
+        System.out.println(c.bread);
+
+        Car car = new Car();
+
+        System.out.println(car);
+
+
+        // Stretch B1
+        String make = "BMW";
+        String model = "M4";
+        int year = 2024;
+
+        String description = year + " " + make + " " + model;
+
+        System.out.println(description);
+
+
+        // Stretch B2
+        Pizza mine = new Pizza("thin crust", "tomato", "cheddar", "olives");
+
+        System.out.println(mine);
+
+
+        // Stretch B3
+        Car other = new Car("Toyota", "Corolla", "blue", 2018);
+
+        System.out.println(other);
+    }
 }
