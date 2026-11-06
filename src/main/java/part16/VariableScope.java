@@ -11,11 +11,14 @@ package part16;
 //    His class with main is called Main. Yours is called VariableScope.
 //    Leave the "package part16;" line and the "public class VariableScope" line alone.
 //    He also makes a class called DiceRoller. YOU make that file too:
-//    right-click the part16 folder -> New -> Java Class -> type DiceRoller -> Enter.
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    in THIS file AND in DiceRoller.java, saying in YOUR OWN WORDS what that line does.
-
+// Declares the public VariableScope class
 public class VariableScope {
-
+    // Defines the main method where the program starts
+    public static void main(String[] args) {
+        // Creates a new DiceRoller object, which runs its constructor
+        DiceRoller diceRoller = new DiceRoller();
+    }
 }
